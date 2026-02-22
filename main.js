@@ -44,16 +44,16 @@ createChartOnVisible('rmseChart', {
     labels: ['공식 (STEP 1)', 'ExtraTrees', 'XGBoost', 'LightGBM', 'CatBoost', '최종(LB)'],
     datasets: [{
       label: 'RMSE',
-      data: [0.2895, 0.0642, 0.0689, 0.0688, 0.0670, 0.17776],
+      data: [0.2895, 0.0642, 0.0689, 0.0688, 0.0670, 0.06288],
       backgroundColor: [
         'rgba(255,76,109,0.7)', // 공식
         'rgba(59,158,255,0.7)', // ET
         'rgba(255,140,66,0.7)', // XGB
         'rgba(16,217,140,0.7)', // LGB
         'rgba(155,109,255,0.7)', // CAT
-        'rgba(255,214,10,0.9)'  // 최종(LB)
+        'rgba(16,217,140,0.9)'  // 최종(LB) - Changed to green-ish since it's the best
       ],
-      borderColor: ['#FF4D6D','#3B9EFF','#FF8C42','#10D98C','#9B6DFF','#FFD60A'],
+      borderColor: ['#FF4D6D','#3B9EFF','#FF8C42','#10D98C','#9B6DFF','#10D98C'],
       borderWidth: 1.5, borderRadius: 6
     }]
   },
@@ -295,7 +295,7 @@ createChartOnVisible('rmseCompareChart', {
     labels:['공식만','+ ET','+ XGB','+ LGB','+ CAT','앙상블(OOF)','제출(LB)'],
     datasets:[{
       label:'RMSE',
-      data:[0.2895, 0.0642, 0.0689, 0.0688, 0.0670, 0.0626, 0.17776],
+      data:[0.2895, 0.0642, 0.0689, 0.0688, 0.0670, 0.0626, 0.06288],
       backgroundColor:[
         'rgba(255,76,109,0.7)', // 공식만
         'rgba(59,158,255,0.7)', // + ET
@@ -303,9 +303,9 @@ createChartOnVisible('rmseCompareChart', {
         'rgba(16,217,140,0.7)', // + LGB
         'rgba(155,109,255,0.7)', // + CAT
         'rgba(16,217,140,0.9)', // 앙상블(OOF)
-        'rgba(255,214,10,0.9)'  // 제출(LB)
+        'rgba(16,217,140,1.0)'  // 제출(LB)
       ],
-      borderColor:['#FF4D6D','#3B9EFF','#FF8C42','#10D98C','#9B6DFF','#10D98C','#FFD60A'],
+      borderColor:['#FF4D6D','#3B9EFF','#FF8C42','#10D98C','#9B6DFF','#10D98C','#10D98C'],
       borderWidth:1.5,borderRadius:6
     }]
   },
